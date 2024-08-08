@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import "../Styles/Card.css";
 
-const Card = ({ onClick }) => {
+const Card = ({ onClick, id }) => {
   return (
-    <button className="card" onClick={onClick}>
+    <button id={id} className="card" onClick={onClick}>
       123
     </button>
   );
