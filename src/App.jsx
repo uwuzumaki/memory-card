@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Styles/App.css";
 import { shuffle } from "lodash";
 import Card from "./Components/Card";
+import pokemon from "./Components/Helper";
 
 function App() {
   const [score, setScore] = useState(0);
@@ -11,18 +12,21 @@ function App() {
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
   ]);
 
+  useEffect(() => {
+    const data = pokemon();
+    console.log(data);
+  }, []);
+
   const onClick = (e) => {
     if (pickedCards.includes(e.target.id)) {
       setPickedCards([]);
       setScore(0);
       setArray(shuffle(array));
-      console.log(array);
     } else {
       setPickedCards((cards) => [...cards, e.target.id]);
       setScore((score) => score + 1);
       if (score >= highScore) setHighScore((score) => score + 1);
       setArray(shuffle(array));
-      console.log(array);
     }
   };
 
