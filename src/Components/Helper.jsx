@@ -1,5 +1,8 @@
 import { random } from "lodash";
 
+// Helper function that pulls all the necessary Pokémon from the API using promises.
+// Once all the promises are resolved, the data is set into an array.
+// This array is passed onto the state of the parent.
 const pokemon = async (setArray) => {
   let allData = [];
   try {

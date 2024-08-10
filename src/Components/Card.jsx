@@ -2,6 +2,7 @@
 import "../Styles/Card.css";
 import { capitalize } from "lodash";
 
+// Card for displaying all Pokémon
 const Card = ({ onClick, id, poke }) => {
   return (
     <button id={id} className="card" onClick={onClick}>

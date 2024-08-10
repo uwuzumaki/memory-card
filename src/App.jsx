@@ -11,9 +11,11 @@ function App() {
   const [array, setArray] = useState([]);
 
   useEffect(() => {
-    pokemon(setArray);
+    pokemon(setArray); // Passes the setArray update function to pokemon
   }, []);
 
+  // Checks if the the clicked pokemon. If not, will add score and shuffle.
+  // Otherwise, set score to 0 and shuffle
   const onClick = (e) => {
     if (pickedCards.includes(e.target.id)) {
       setPickedCards([]);
