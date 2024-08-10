@@ -1,4 +1,12 @@
 .card {
-  width: 25%;
+  width: 45%;
   height: auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+button > img {
+  max-width: 50%;
+  margin: auto;
 }

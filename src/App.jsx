@@ -8,13 +8,10 @@ function App() {
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
   const [pickedCards, setPickedCards] = useState([]);
-  const [array, setArray] = useState([
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
-  ]);
+  const [array, setArray] = useState([]);
 
   useEffect(() => {
-    const data = pokemon();
-    console.log(data);
+    pokemon(setArray);
   }, []);
 
   const onClick = (e) => {
@@ -41,8 +38,13 @@ function App() {
         <div>High Score: {highScore}</div>
       </section>
       <div className="table">
-        {array.map((num) => (
-          <Card onClick={onClick} key={num} id={num} />
+        {array.map((poke) => (
+          <Card
+            onClick={onClick}
+            id={"p" + poke.id}
+            key={poke.id}
+            poke={poke}
+          />
         ))}
       </div>
     </>

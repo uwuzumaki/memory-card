@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
 import "../Styles/Card.css";
+import { capitalize } from "lodash";
 
-const Card = ({ onClick, id }) => {
+const Card = ({ onClick, id, poke }) => {
   return (
     <button id={id} className="card" onClick={onClick}>
-      {id}
+      {capitalize(poke.name)}{" "}
+      <img id={poke.id} src={poke.sprites.front_default} />
     </button>
   );
 };
