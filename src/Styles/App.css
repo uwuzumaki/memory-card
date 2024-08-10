@@ -33,12 +33,13 @@ div + hr {
 
 .table {
   width: 90%;
-  min-height: 40vh;
+  min-height: 70vh;
   margin: 0 auto;
+  padding: auto;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 5px;
   grid-row-gap: 5px;
 }

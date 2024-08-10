@@ -6,6 +6,11 @@
   flex-direction: column;
 }
 
+button {
+  margin: auto;
+  padding: 2rem;
+}
+
 button > img {
   max-width: 50%;
   margin: auto;
