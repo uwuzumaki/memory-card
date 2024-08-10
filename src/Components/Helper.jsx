@@ -1,3 +1,5 @@
+import { random } from "lodash";
+
 const pokemon = async (setArray) => {
   let allData = [];
   try {
@@ -16,18 +18,18 @@ const pokemon = async (setArray) => {
       response11,
       response12,
     ] = await Promise.all([
-      fetch(url + "1"),
-      fetch(url + "2"),
-      fetch(url + "3"),
-      fetch(url + "4"),
-      fetch(url + "5"),
-      fetch(url + "6"),
-      fetch(url + "7"),
-      fetch(url + "8"),
-      fetch(url + "9"),
-      fetch(url + "10"),
-      fetch(url + "11"),
-      fetch(url + "12"),
+      fetch(url + random(0, 1025)),
+      fetch(url + random(0, 1025)),
+      fetch(url + random(0, 1025)),
+      fetch(url + random(0, 1025)),
+      fetch(url + random(0, 1025)),
+      fetch(url + random(0, 1025)),
+      fetch(url + random(0, 1025)),
+      fetch(url + random(0, 1025)),
+      fetch(url + random(0, 1025)),
+      fetch(url + random(0, 1025)),
+      fetch(url + random(0, 1025)),
+      fetch(url + random(0, 1025)),
     ]);
 
     const data1 = await response1.json();
